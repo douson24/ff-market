@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ignore temp office files:
 ~$*.xlsx
 ~$*.docx
@@ -14,3 +15,7 @@ meteor-app/.idea/
 meteor-app/settings.json
 meteor-app/settings-development.json
 meteor-app/settings-production.json
+=======
+.meteor/local
+.meteor/meteorite
+>>>>>>> 946648bc264bcd7f3d7184e35da88baf3961f0cf
