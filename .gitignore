@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+# ignore temp office files:
+~$*.xlsx
+~$*.docx
+~*.tmp
+
+.DS_Store
+
+#IDE files:
+.idea/workspace.xml
+meteor-app/.idea/
+
+# ignore these folders:
+
+meteor-app/settings.json
+meteor-app/settings-development.json
+meteor-app/settings-production.json
+=======
+.meteor/local
+.meteor/meteorite
+>>>>>>> 946648bc264bcd7f3d7184e35da88baf3961f0cf
