@@ -1,9 +1,31 @@
 
 <template name="mainLayout">
     <!--сюда добавить header-->
+    <header>
+        {{> yield "header"}}
+    </header>
     
     <!-- body -->
     <div class="mk-main">
         {{> yield}}
     </div>
+
+    <footer>
+        {{> yield "footer"}}
+    </footer>
+</template>
+
+
+
+
+
+
+<!-- ************************************** -->
+
+<template name="appHeader">
+    <h1>TITLE</h1>
+</template>
+
+<template name="appFooter">
+    <h3>Some post specific footer content.</h3>
 </template>
