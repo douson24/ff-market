@@ -2,10 +2,7 @@
 
   Template.homePage.rendered = function() {
     
-    var i = $('img');
-    i.each(function(n) {
-      this.id = this.tagName + '_' + n;
-    });
+    
     
   };
 

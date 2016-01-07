@@ -33,6 +33,13 @@ Package.onUse(function(api) {
     'client/browser/uikit-main.less'
 
   ], 'client', {isImport: true});*/
+  
+  api.addAssets([
+      'client/browser/fonts/FontAwesome.otf',
+      'client/browser/fonts/fontawesome-webfont.ttf',
+      'client/browser/fonts/fontawesome-webfont.woff',
+      'client/browser/fonts/fontawesome-webfont.woff2'
+  ], 'client');
 
   api.addFiles([
     'client/browser/css/uikit.css',

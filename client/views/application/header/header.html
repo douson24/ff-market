@@ -1,5 +1,92 @@
 <template name="appHeaderTmpl">
-    <h1>
-        title title etc
-    </h1>
+    <nav id="main-nav" class="uk-container uk-container-center main-nav">
+        <div class="mk-toolbar uk-clearfix uk-hidden-small">
+            <div class="uk-float-left">{{> mrHeaderLogo }}</div>
+            <div class="div uk-float-right">
+                <div class="uk-float-right">{{> mkHeaderLanguage }}</div>
+                <div class="uk-float-right">{{> mkHeaderTopMenu }}</div>
+            </div>
+        </div>
+        <nav class="mk-navbar">
+            <div class="div uk-float-left">{{> mkHeaderMainMenu}}</div>
+            <div class="div uk-float-right">{{> mkHeaderSearch }}</div>
+        </nav>
+    </nav>
+</template>
+
+
+
+
+<template name="mkHeaderMainMenu">
+    <nav class="mk-mainmenu-navbar-nav">
+        <ul class="uk-navbar-nav">
+            <li class="uk-{{active}}"><a href="">One</a></li>
+            <li><a href="">Two</a></li>
+            <li><a href="">Three</a></li>
+            <li><a href="">etc</a></li>
+        </ul>
+    </nav>
+</template>
+
+
+<template name="mrHeaderLogo">
+    {{#if getLogo screen='desktop'}}
+        <div class="uk-navbar-content uk-padding-remove uk-visible-small"><a class="tm-logo-small uk-float-left" href="#">
+        <img src="http://yootheme.com/demo/themes/joomla/2015/avion/images/yootheme/demo/light/logo_small.svg" width="42" height="40" alt="Demo" class="uk-responsive-height"></a></div>
+    {{else}}
+        <a class="mk-logo uk-float-left" href="#">
+        <img src="http://yootheme.com/demo/themes/joomla/2015/avion/images/yootheme/demo/light/logo.svg" width="134" height="40" alt="Demo"></a>
+    {{/if}}
+</template>
+
+
+<template name="mkHeaderSearch">
+    <div class="uk-navbar-flip">
+        <div class="uk-navbar-content uk-visible-large mk-header-search">
+            <form class="uk-search" data-uk-search="{source:'my-results.json'}">
+                <input class="uk-search-field" type="search" placeholder="search..." autocomplete="off">
+
+                <!-- This is the dropdown, which is injected through JavaScript -->
+                <div class="uk-dropdown uk-dropdown-search">
+                    <ul class="uk-nav uk-nav-search">...</ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+
+<template name="mkHeaderLanguage">
+    <div class="uk-button-group">
+
+        <!-- This is a button -->
+        <button class="uk-button">ENG</button>
+
+        <!-- This is the container enabling the JavaScript -->
+        <div data-uk-dropdown="{mode:'click'}">
+
+            <!-- This is the button toggling the dropdown -->
+            <a href="" class="uk-button"><i class="uk-icon-caret-down"></i></a>
+
+            <!-- This is the dropdown -->
+            <div class="uk-dropdown uk-dropdown-small">
+                <ul class="uk-nav uk-nav-dropdown">
+                    <li><a href="" data-lang="ENG">English</a></li>
+                    <li><a href="" data-lang="RUS">Русский</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+
+<template name="mkHeaderTopMenu">
+    <nav class="mk-top-navbar-nav">
+        <ul class="uk-navbar-nav">
+            <li class="uk-{{active}}"><a href="">Market News</a></li>
+            <li><a href="">Partnerships</a></li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+    </nav>
 </template>
