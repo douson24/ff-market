@@ -1,16 +1,22 @@
 <template name="appHeaderTmpl">
     <nav id="main-nav" class="uk-container uk-container-center main-nav">
         <div class="mk-toolbar uk-clearfix uk-hidden-small">
-            <div class="uk-float-left">{{> mrHeaderLogo }}</div>
-            <div class="div uk-float-right">
-                <div class="uk-float-right">{{> mkHeaderLanguage }}</div>
-                <div class="uk-float-right">{{> mkHeaderTopMenu }}</div>
+            <div class="mk-header-logo uk-float-left">{{> mrHeaderLogo }}</div>
+            <div class="mk-header-general-top-menu uk-flex uk-flex-middle uk-flex-right">
+                <div class="mk-header-top-menu uk-float-right">{{> mkHeaderTopMenu }}</div>
+                <div class="mk-header-language uk-float-right">{{> mkHeaderLanguage }}</div>
             </div>
         </div>
-        <nav class="mk-navbar">
-            <div class="div uk-float-left">{{> mkHeaderMainMenu}}</div>
-            <div class="div uk-float-right">{{> mkHeaderSearch }}</div>
+        <nav class="mk-navbar uk-navbar">
+            <a href="#my-id" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            
+            <div class="mk-header-main-menu uk-hidden-small uk-float-left">{{> mkHeaderMainMenu}}</div>
+            <div class="mk-header-search uk-float-right">{{> mkHeaderSearch }}</div>
         </nav>
+
+        <!-- OffCanvas menu -->
+        {{> mkOffCanvas}}
+        
     </nav>
 </template>
 
@@ -20,10 +26,10 @@
 <template name="mkHeaderMainMenu">
     <nav class="mk-mainmenu-navbar-nav">
         <ul class="uk-navbar-nav">
-            <li class="uk-{{active}}"><a href="">One</a></li>
-            <li><a href="">Two</a></li>
-            <li><a href="">Three</a></li>
-            <li><a href="">etc</a></li>
+            <li class="{{isActivePath '/traders'}}"><a href="{{pathFor 'traders'}}">Для трейдеров</a></li>
+            <li class="{{isActivePath '/beginners'}}"><a href="/beginners">Для начинающих</a></li>
+            <li class="{{isActivePath '/market-analysis'}}"><a href="/market-analysis">Анализ рынков</a></li>
+            <li class="{{isActivePath '/brokers-rating'}}"><a href="/brokers-rating">Рейтинг брокеров</a></li>
         </ul>
     </nav>
 </template>
@@ -84,9 +90,18 @@
 <template name="mkHeaderTopMenu">
     <nav class="mk-top-navbar-nav">
         <ul class="uk-navbar-nav">
-            <li class="uk-{{isActivePath '/'}}"><a href="">Market News</a></li>
+            <li class="{{isActivePath '/'}}"><a href="">Market News</a></li>
             <li><a href="">Partnerships</a></li>
             <li><a href="">Contact us</a></li>
         </ul>
     </nav>
+</template>
+
+<!-- OffCanvas menu -->
+<template name="mkOffCanvas">
+    <div id="my-id" class="uk-offcanvas" aria-hidden="true">
+        <div class="uk-offcanvas-bar">
+            <div class="uk-panel">Lorem ipsum dolor sit amet, <a href="#">consetetur</a> sadipscing elitr.</div>
+        </div>
+    </div>
 </template>

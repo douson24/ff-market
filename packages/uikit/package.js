@@ -43,7 +43,6 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'client/browser/css/uikit.css',
-    'client/browser/css/uikit.almost-flat.css',
     'client/browser/css/components/accordion.almost-flat.css',
     'client/browser/css/components/accordion.css',
     'client/browser/css/components/accordion.gradient.css',
@@ -109,6 +108,13 @@ Package.onUse(function(api) {
     'client/browser/css/components/upload.css',
     'client/browser/css/components/upload.gradient.css'
       
+  ], 'client');
+
+  /* Template almost flat */
+  api.addFiles([
+    /*
+    'client/browser/css/uikit.almost-flat.css',
+    */
   ], 'client');
   
 });

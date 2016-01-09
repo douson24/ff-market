@@ -6,21 +6,49 @@ header {
     background-color: rgba(255,255,255, 1);
   }
   
-  
+  /* Header search */
   .mk-header-search {
     padding: 0 0 0 15px;
   }
-  
-  .mk-top-navbar-nav {
+  .mk-toolbar {
+    
+    .mk-header-logo {}
+    
+    .mk-header-general-top-menu {
 
-    .uk-navbar-nav {
+      /* Top menu */
+      .mk-header-top-menu {
+        margin-right: 10px;
 
-      li {
         
-        a {
-          font-family: "OpenSansRegular", sans-serif;
+        .mk-top-navbar-nav {
+
+          .uk-navbar-nav {
+
+            li {
+
+              a {
+                font-family: "OpenSansRegular", sans-serif;
+              }
+            }
+          }
         }
       }
     }
   }
+  
+  
+  /* Bottom menu toolbar */
+  .mk-navbar {
+    overflow: hidden;
+    padding: 10px 0;
+    background: transparent;
+
+    /* Main menu */
+    .mk-mainmenu-navbar-nav {
+      overflow: hidden;
+      text-transform: uppercase;
+    }
+  }
+  
 }

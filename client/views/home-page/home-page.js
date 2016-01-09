@@ -16,6 +16,8 @@
   });
   
   
-  Template.homePage.helpers();
+  Template.homePage.helpers({
+   
+  });
   
 

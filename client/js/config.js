@@ -21,3 +21,12 @@ Meteor.Spinner.options = {
   top: 'auto', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
+
+
+/* Active Route */
+ActiveRoute.configure({
+  activeClass: 'uk-active',
+  caseSensitive: true,
+  disabledClass: 'disabled',
+  regex: 'false'
+});
