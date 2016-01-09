@@ -55,7 +55,7 @@
     </div>
 </template>
 
-
+<!-- Choose Language -->
 <template name="mkHeaderLanguage">
     <div class="uk-button-group">
 
@@ -71,8 +71,8 @@
             <!-- This is the dropdown -->
             <div class="uk-dropdown uk-dropdown-small">
                 <ul class="uk-nav uk-nav-dropdown">
-                    <li><a href="" data-lang="ENG">English</a></li>
-                    <li><a href="" data-lang="RUS">Русский</a></li>
+                    <li><a href="#" data-lang="ENG">English</a></li>
+                    <li><a href="#" data-lang="RUS">Русский</a></li>
                 </ul>
             </div>
 
@@ -84,7 +84,7 @@
 <template name="mkHeaderTopMenu">
     <nav class="mk-top-navbar-nav">
         <ul class="uk-navbar-nav">
-            <li class="uk-{{active}}"><a href="">Market News</a></li>
+            <li class="uk-{{isActivePath '/'}}"><a href="">Market News</a></li>
             <li><a href="">Partnerships</a></li>
             <li><a href="">Contact us</a></li>
         </ul>
