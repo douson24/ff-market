@@ -1,8 +1,41 @@
+@import "{}/client/styles/custom/mixin-variables.less";
 
 html {
-  background-color: rgba(232,237,236, 1);
   min-height:100%;
-  font-family: 'OpenSansRegular';
+  font-family: 'OpenSansRegular', sans-serif;
+  background-color: transparent;
 }
 
-body {}
+.spinner-container {
+  background-color: rgba(0,0,0, .8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2145893578899;
+}
+
+.mk-header-layout {
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  background-color: @body-bg;
+}
+
+.mk-middle-layout {
+  padding: 20px;
+  background-color: rgba(234,234,234, 1);
+  background-image: url(images/body-gradient.png);
+  background-position: center top;
+  background-repeat: repeat-x;
+}
+
+.mk-footer-layout {
+  border-top: 1px solid rgba(0,0,0,.05);
+  background-image: url(images/footer-bg-sprite.png);
+  background-size: 235px 185px;
+  overflow: hidden;
+}

@@ -25,7 +25,10 @@ Package.onUse(function(api) {
     'client/browser/js/core/core.js',
     'client/browser/js/core/cover.js',
     'client/browser/js/core/dropdown.js',
-    'client/browser/js/core/grid.js'
+    'client/browser/js/core/grid.js',
+     
+    /* components */  
+    'client/browser/js/components/sticky.js'
       
   ], 'client');
 

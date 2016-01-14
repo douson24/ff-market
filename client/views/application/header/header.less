@@ -1,16 +1,23 @@
 
 header {
-  margin-bottom: 20px;
   
-  &.mk-header-layout {
-    background-color: rgba(255,255,255, 1);
+  .main-nav {
+    background-color: rgba(50,52,57, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    width: 100%;
+    position: relative;
+    z-index: 1000;
   }
+  
+  &.mk-header-layout {}
   
   /* Header search */
   .mk-header-search {
     padding: 0 0 0 15px;
   }
+  
   .mk-toolbar {
+    padding: 10px 0;
     
     .mk-header-logo {}
     
@@ -21,34 +28,247 @@ header {
         margin-right: 10px;
 
         
-        .mk-top-navbar-nav {
+        .mk-top-navbar-nav {}
+      }
+    }
+  }
 
-          .uk-navbar-nav {
+  .uk-navbar-nav {
 
-            li {
+    li {
 
-              a {
-                font-family: "OpenSansRegular", sans-serif;
-              }
-            }
+      a {
+        padding: 10px 15px;
+        font-family: "OpenSansRegular", sans-serif;
+        line-height: normal;
+      }
+    }
+  }
+  
+  /* Bottom menu toolbar */
+  .mk-navbar {
+    /*overflow: hidden;*/
+    background: transparent;
+
+    /* Main menu */
+    .mk-mainmenu-navbar-nav {
+      /*overflow: hidden;*/
+      text-transform: uppercase;
+      
+      .mk-dropdown-fullwidth {
+        top: 35px !important;
+        
+        .uk-nav {
+          text-align: center;
+          padding: 5px 0;
+          
+          li {
+            display: inline-block;
           }
         }
       }
     }
   }
   
+  .mk-currency-animation-box {
+    position: relative;
+  }
   
-  /* Bottom menu toolbar */
-  .mk-navbar {
+  .mk-currency-animation-wrapper {
+    position: relative;
     overflow: hidden;
-    padding: 10px 0;
-    background: transparent;
-
-    /* Main menu */
-    .mk-mainmenu-navbar-nav {
-      overflow: hidden;
-      text-transform: uppercase;
+    height: 800px;
+  }
+  
+  .mk-currency-animation {
+    background-color: rgb(25, 34, 43);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+        
+    .anim-1 {
+      background-image: url(images/header-animation/anim1.png);
+      height: 31px;
+      width: 28px;
     }
+    
+    .anim-2 {
+      height: 35px;
+      width: 35px;
+      background-image: url(images/header-animation/anim2.png);
+    }
+    
+    .anim-3 {
+      height: 31px;
+      width: 28px;
+      background-image: url(images/header-animation/anim1.png);
+    }
+
+    .anim-4 {
+      height: 35px;
+      width: 35px;
+      background-image: url(images/header-animation/anim2.png);
+    }
+    
+    .anim-5 {
+      height: 35px;
+      width: 35px;
+      background-image: url(images/header-animation/anim2.png);
+    }
+    
+    .anim-6 {
+      height: 35px;
+      width: 35px;
+      background-image: url(images/header-animation/anim2.png);
+    }
+    
+    .anim-7 {
+      height: 37px;
+      width: 41px;
+      background-image: url(images/header-animation/anim4.png);
+    }
+    
+    .anim-8 {
+      height: 30px;
+      width: 33px;
+      background-image: url(images/header-animation/anim3.png);
+    }
+    
+    .anim-9 {
+      background-image: url(images/header-animation/anim1.png);
+      height: 31px;
+      width: 28px;
+    }
+        
+    .anim-10 {
+      height: 37px;
+      width: 41px;
+      background-image: url(images/header-animation/anim4.png);
+    }
+    
+    .anim-11 {
+      height: 37px;
+      width: 41px;
+      background-image: url(images/header-animation/anim4.png);
+    }
+    
+    .anim-12 {
+      height: 30px;
+      width: 33px;
+      background-image: url(images/header-animation/anim3.png);
+    }
+    
+    .anim-13 {
+      height: 30px;
+      width: 33px;
+      background-image: url(images/header-animation/anim3.png);
+     
+    }
+    
+    .anim-14 {
+      background-image: url(images/header-animation/anim1.png);
+      height: 31px;
+      width: 28px;
+    }
+
+    .anim-15 {
+      height: 31px;
+      width: 28px;
+      background-image: url(images/header-animation/anim1.png);
+    }
+
+    .anim-16 {
+      height: 46px;
+      width: 51px;
+      background-image: url(images/header-animation/anim6.png);
+    }
+
+    .anim-17 {
+      height: 46px;
+      width: 51px;
+      background-image: url(images/header-animation/anim6.png);
+    }
+
+    .anim-18 {
+      height: 46px;
+      width: 51px;
+      background-image: url(images/header-animation/anim6.png);
+    }
+    
+    
   }
   
 }
+
+
+
+
+
+
+
+
+
+/* ANIMATION NAME */
+
+@keyframes Animation1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Animation2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes Animation3 {
+  0% {
+    opacity: 0;
+    transform: translate3d(12px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes Animation4 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 12px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes Animation5 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0px, -100px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0px, -200px, 0px);
+  }
+}
+@keyframes Animation6 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-12px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+

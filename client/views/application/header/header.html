@@ -1,5 +1,5 @@
 <template name="appHeaderTmpl">
-    <nav id="main-nav" class="uk-container uk-container-center main-nav">
+    <nav class="uk-container uk-container-center main-nav">
         <div class="mk-toolbar uk-clearfix uk-hidden-small">
             <div class="mk-header-logo uk-float-left">{{> mrHeaderLogo }}</div>
             <div class="mk-header-general-top-menu uk-flex uk-flex-middle uk-flex-right">
@@ -18,6 +18,13 @@
         {{> mkOffCanvas}}
         
     </nav>
+    
+    <div class="mk-currency-animation-box">
+        <div class="mk-currency-animation-wrapper">
+            <div><!-- The background will be below of the animation --></div>
+            <div class="mk-currency-animation"></div>
+        </div>
+    </div>
 </template>
 
 
@@ -29,7 +36,20 @@
             <li class="{{isActivePath '/traders'}}"><a href="{{pathFor 'traders'}}">Для трейдеров</a></li>
             <li class="{{isActivePath '/beginners'}}"><a href="/beginners">Для начинающих</a></li>
             <li class="{{isActivePath '/market-analysis'}}"><a href="/market-analysis">Анализ рынков</a></li>
-            <li class="{{isActivePath '/brokers-rating'}}"><a href="/brokers-rating">Рейтинг брокеров</a></li>
+            <li class="{{isActivePath '/brokers-rating'}}" data-uk-dropdown="{mode:'click', justify:'#header-nav'}">
+
+                <!-- This is the nav item toggling the dropdown -->
+                <a href="/brokers-rating">Рейтинг брокеров</a>
+
+                <!-- This is the dropdown -->
+                <div class="uk-dropdown uk-dropdown-small mk-dropdown-fullwidth">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="">Some 1</a></li>
+                        <li><a href="">Some 2</a></li>
+                    </ul>
+                </div>
+
+            </li>
         </ul>
     </nav>
 </template>
@@ -37,10 +57,10 @@
 
 <template name="mrHeaderLogo">
     {{#if getLogo screen='desktop'}}
-        <div class="uk-navbar-content uk-padding-remove uk-visible-small"><a class="tm-logo-small uk-float-left" href="#">
+        <div class="uk-navbar-content uk-padding-remove uk-visible-small"><a class="tm-logo-small uk-float-left" href="/">
         <img src="http://yootheme.com/demo/themes/joomla/2015/avion/images/yootheme/demo/light/logo_small.svg" width="42" height="40" alt="Demo" class="uk-responsive-height"></a></div>
     {{else}}
-        <a class="mk-logo uk-float-left" href="#">
+        <a class="mk-logo uk-float-left" href="/">
         <img src="http://yootheme.com/demo/themes/joomla/2015/avion/images/yootheme/demo/light/logo.svg" width="134" height="40" alt="Demo"></a>
     {{/if}}
 </template>
